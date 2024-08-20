@@ -1,0 +1,869 @@
+1.  Register API
+    URL: http://localhost:2002/register
+    Request Type: POST
+    Body: {
+        "name":"Ram",
+        "accno":7532,
+        "email":"ram@gmail.com",
+        "balance":200000.0,
+        "password":7410,
+        "city":"Indore",
+        "mobile":6584841651,
+        "state":"M.P",
+        "pincode":456335,
+        "gender":"Male",
+        "pancard":"APPQ456966"
+        }
+    Response: {
+        "status": true,
+        "record": {
+            "name": "ram",
+            "accno": "7532",
+            "email": "ram@gmail.com",
+            "balance": 200000,
+            "password": "$2b$10$cshkuIdyFmPyWKM9Q54DBeIgD6Ser6yWOqAyiIGa9RABPrK9dMy2e",
+            "mobile": "6584841651",
+            "address": {
+                "city": "Indore",
+                "state": "M.P",
+                "pincode": 456335
+            },
+            "gender": "Male",
+            "pancard": "APPQ456966",
+            "acctype": "Saving",
+            "simpleinterestrate": 3.1,
+            "fdinterestrate": 7.1,
+            "role": "customer",
+            "status": 0,
+            "info": "Fri May 24 2024 03:04:51 GMT-0700 (Pacific Daylight Time)",
+            "ifsc_code": "MPB89890",
+            "_id": "6650667a2efd003758b3aaa4",
+            "__v": 0
+        },
+        "msg": "Customer registered successfully"
+        }
+***********************************************************************************************************
+2.  Login API
+    URL: http://localhost:2002/login
+    Request Type: POST
+    Body: {
+        "email": "rambadiadev@gmail.com",
+        "password": 12345
+        }
+    Response: {
+        "status": true,
+        "record": {
+            "_id": "665767f7dbb8e2e5e12ad4cd",
+            "name": "devu",
+            "accno": "7532",
+            "email": "rambadiadev@gmail.com",
+            "balance": 200000,
+            "password": "$2b$10$yz.rF4wH2vP1dY9vNQ07X.v0Ia.ASMUuWdzPzysEnpLkMFjmPZqnW",
+            "mobile": "9407260026",
+            "address": {
+                "city": "Indore",
+                "state": "M.P",
+                "pincode": 451212
+            },
+            "gender": "Male",
+            "pancard": "EXPLA4566M",
+            "acctype": "Saving",
+            "simpleinterestrate": 3.1,
+            "fdinterestrate": 7.1,
+            "role": "customer",
+            "status": 0,
+            "info": "Wed May 29 2024 23:04:18 GMT+0530 (India Standard Time)",
+            "ifsc_code": "MPB89890",
+            "__v": 0
+        },
+        "msg": "Login Successfull",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcl9pZCI6IjY2NTc2N2Y3ZGJiOGUyZTVlMTJhZDRjZCIsImlhdCI6MTcxNzAwNjUzMiwiZXhwIjoxNzE3NDM4NTMyfQ.eCun1lD9GJGkJB4_MhzpxBRyBGlViLy6rB4dw2B_ipA"
+        }
+***********************************************************************************************************
+3.  Get Customer List API
+    URL: http://localhost:2002/admin/customerList
+    Request Type: GET
+    Response: {
+    "status": true,
+    "msg": "List is here",
+    "records": [
+            {
+                "_id": "665023e3f6d32fc875eb4108",
+                "name": "demo data",
+                "accno": "7410",
+                "email": "demo@gmail.com",
+                "balance": 125000,
+                "password": "12345",
+                "mobile": "6584841651",
+                "gender": "Male",
+                "pancard": "APPQ456966",
+                "acctype": "Saving",
+                "simpleinterestrate": 3.1,
+                "fdinterestrate": 7.1,
+                "role": "customer",
+                "status": 0,
+                "info": "Thu May 23 2024 22:21:35 GMT-0700 (Pacific Daylight Time)",
+                "ifsc_code": "MPB89890",
+                "__v": 0
+            },
+            {
+                "_id": "66505514f56cf0e88fd3df8f",
+                "name": "dev",
+                "accno": "4522",
+                "email": "dev@gmail.com",
+                "balance": 125000,
+                "password": "$2b$10$RPnJdtXt6QkXIDfqMPYa6Oiqi7pU4AWcvYnN7xzu4P1uM5WKweQNq",
+                "mobile": "6584841651",
+                "address": {
+                    "city": "Indore",
+                    "state": "M.P",
+                    "pincode": 456335
+                },
+                "gender": "Male",
+                "pancard": "APPQ456966",
+                "acctype": "Saving",
+                "simpleinterestrate": 3.1,
+                "fdinterestrate": 7.1,
+                "role": "customer",
+                "status": 0,
+                "info": "Fri May 24 2024 01:51:18 GMT-0700 (Pacific Daylight Time)",
+                "ifsc_code": "MPB89890",
+                "__v": 0
+            },
+            {
+                "_id": "665066116d6513bc15ea67bb",
+                "name": "varun",
+                "accno": "7532",
+                "email": "varun@gmail.com",
+                "balance": 200000,
+                "password": "$2b$10$qSGFIGKLK.2QYJiwcf8e6u1OvutRV35uiQ68ugdavBCZuQL9XBT.m",
+                "mobile": "6584841651",
+                "address": {
+                    "city": "Indore",
+                    "state": "M.P",
+                    "pincode": 456335
+                },
+                "gender": "Male",
+                "pancard": "APPQ456966",
+                "acctype": "Saving",
+                "simpleinterestrate": 3.1,
+                "fdinterestrate": 7.1,
+                "role": "customer",
+                "status": 0,
+                "info": "Fri May 24 2024 03:03:56 GMT-0700 (Pacific Daylight Time)",
+                "ifsc_code": "MPB89890",
+                "__v": 0
+            },
+            {
+                "_id": "6650667a2efd003758b3aaa4",
+                "name": "ram",
+                "accno": "7532",
+                "email": "ram@gmail.com",
+                "balance": 200000,
+                "password": "$2b$10$cshkuIdyFmPyWKM9Q54DBeIgD6Ser6yWOqAyiIGa9RABPrK9dMy2e",
+                "mobile": "6584841651",
+                "address": {
+                    "city": "Indore",
+                    "state": "M.P",
+                    "pincode": 456335
+                },
+                "gender": "Male",
+                "pancard": "APPQ456966",
+                "acctype": "Saving",
+                "simpleinterestrate": 3.1,
+                "fdinterestrate": 7.1,
+                "role": "customer",
+                "status": 0,
+                "info": "Fri May 24 2024 03:04:51 GMT-0700 (Pacific Daylight Time)",
+                "ifsc_code": "MPB89890",
+                "__v": 0
+                }
+            ]
+        }
+***********************************************************************************************************
+4.  Get Single Customer Data API
+    URL: http://localhost:2002/customer/details?id=66505514f56cf0e88fd3df8f
+    Request Type: GET
+    Response: {
+    "status": true,
+    "msg": "Customer is here",
+    "record": [
+            {
+                "_id": "6650667a2efd003758b3aaa4",
+                "name": "ram",
+                "accno": "1111",
+                "email": "ram@gmail.com",
+                "balance": 9950000,
+                "password": "$2b$10$cshkuIdyFmPyWKM9Q54DBeIgD6Ser6yWOqAyiIGa9RABPrK9dMy2e",
+                "mobile": "6584841651",
+                "address": {
+                    "city": "Indore",
+                    "state": "M.P",
+                    "pincode": 456335
+                },
+                "gender": "Male",
+                "pancard": "APPQ456966",
+                "acctype": "Saving",
+                "simpleinterestrate": 3.1,
+                "fdinterestrate": 7.1,
+                "role": "Admin",
+                "status": 1,
+                "info": "Fri May 24 2024 03:04:51 GMT-0700 (Pacific Daylight Time)",
+                "ifsc_code": "MPB89890",
+                "__v": 0
+                }
+            ]
+        }
+***********************************************************************************************************
+5.  Withdraw API
+    URL: http://localhost:2002/customer/withdraw?id=6650667a2efd003758b3aaa4
+    Request Type: PUT
+    Body: {
+        "amount":50000,
+        "email":"ram@gmail.com",
+        "accno":"1111"
+        }
+    Response: {
+    "status": true,
+    "record": {
+            "_id": "6650667a2efd003758b3aaa4",
+            "name": "ram",
+            "accno": "1111",
+            "email": "ram@gmail.com",
+            "balance": 9950000,
+            "password": "$2b$10$cshkuIdyFmPyWKM9Q54DBeIgD6Ser6yWOqAyiIGa9RABPrK9dMy2e",
+            "mobile": "6584841651",
+            "address": {
+                "city": "Indore",
+                "state": "M.P",
+                "pincode": 456335
+            },
+            "gender": "Male",
+            "pancard": "APPQ456966",
+            "acctype": "Saving",
+            "simpleinterestrate": 3.1,
+            "fdinterestrate": 7.1,
+            "role": "Admin",
+            "status": 1,
+            "info": "Fri May 24 2024 03:04:51 GMT-0700 (Pacific Daylight Time)",
+            "ifsc_code": "MPB89890",
+            "__v": 0
+        },
+        "transaction_type": "Withdraw",
+        "msg": "Withdraw successfull"
+        }
+***********************************************************************************************************
+6.  Deposite API
+    URL: http://localhost:2002/customer/deposite?id=6650667a2efd003758b3aaa4
+    Request Type: PUT
+    Body: {
+        "amount":50000,
+        "email":"ram@gmail.com",
+        "accno":"1111"
+        }
+    Response: {
+    "status": true,
+    "record": {
+            "_id": "6650667a2efd003758b3aaa4",
+            "name": "ram",
+            "accno": "1111",
+            "email": "ram@gmail.com",
+            "balance": 10000000,
+            "password": "$2b$10$cshkuIdyFmPyWKM9Q54DBeIgD6Ser6yWOqAyiIGa9RABPrK9dMy2e",
+            "mobile": "6584841651",
+            "address": {
+                "city": "Indore",
+                "state": "M.P",
+                "pincode": 456335
+            },
+            "gender": "Male",
+            "pancard": "APPQ456966",
+            "acctype": "Saving",
+            "simpleinterestrate": 3.1,
+            "fdinterestrate": 7.1,
+            "role": "Admin",
+            "status": 1,
+            "info": "Fri May 24 2024 03:04:51 GMT-0700 (Pacific Daylight Time)",
+            "ifsc_code": "MPB89890",
+            "__v": 0
+        },
+        "transaction_type": "Deposite",
+        "msg": "Deposite successfull"
+        }
+***********************************************************************************************************
+7.  Get All Customers Transaction History API
+    URL: http://localhost:2002/admin/transactionHistory
+    Request Type: GET
+    Response: {
+        "status": true,
+        "msg": "History is here",
+        "transactionHistory": [
+            {
+                "_id": "66520f4b01c3b288d707386a",
+                "customer_id": "6650667a2efd003758b3aaa4",
+                "amount": 50000,
+                "balance_before_transaction": 10000000,
+                "balance_after_transaction": 9950000,
+                "transaction_type": "Withdraw",
+                "timeStamp": "Sat May 25 2024 09:16:54 GMT-0700 (Pacific Daylight Time)",
+                "__v": 0
+            },
+            {
+                "_id": "66520fd501c3b288d707386e",
+                "customer_id": "6650667a2efd003758b3aaa4",
+                "amount": 50000,
+                "balance_before_transaction": 9950000,
+                "balance_after_transaction": 9900000,
+                "transaction_type": "Withdraw",
+                "timeStamp": "Sat May 25 2024 09:16:54 GMT-0700 (Pacific Daylight Time)",
+                "__v": 0
+            },
+            {
+                "_id": "665210577031b0ce1a89fdc7",
+                "customer_id": "6650667a2efd003758b3aaa4",
+                "amount": 50000,
+                "balance_before_transaction": 9900000,
+                "balance_after_transaction": 9950000,
+                "transaction_type": "Deposite",
+                "timeStamp": "Sat May 25 2024 09:22:38 GMT-0700 (Pacific Daylight Time)",
+                "__v": 0
+            },
+            {
+                "_id": "665210bee639f056f474b00e",
+                "customer_id": "66505514f56cf0e88fd3df8f",
+                "amount": 50000,
+                "balance_before_transaction": 125000,
+                "balance_after_transaction": 175000,
+                "transaction_type": "Deposite",
+                "timeStamp": "Sat May 25 2024 09:23:31 GMT-0700 (Pacific Daylight Time)",
+                "__v": 0
+            },
+            {
+                "_id": "6652113e290dbc54c29e3d1a",
+                "customer_id": "66505514f56cf0e88fd3df8f",
+                "amount": 50000,
+                "balance_before_transaction": 175000,
+                "balance_after_transaction": 125000,
+                "transaction_type": "Withdraw",
+                "timeStamp": "Sat May 25 2024 09:26:17 GMT-0700 (Pacific Daylight Time)",
+                "__v": 0
+            },
+            {
+                "_id": "665211a7f831e26e5ac81736",
+                "customer_id": "66505514f56cf0e88fd3df8f",
+                "amount": 50000,
+                "balance_before_transaction": 125000,
+                "balance_after_transaction": 75000,
+                "transaction_type": "Withdraw",
+                "timeStamp": "Sat May 25 2024 09:28:15 GMT-0700 (Pacific Daylight Time)",
+                "__v": 0
+            },
+            {
+                "_id": "66521239f831e26e5ac8173a",
+                "customer_id": "66505514f56cf0e88fd3df8f",
+                "amount": 51000,
+                "balance_before_transaction": 75000,
+                "balance_after_transaction": 126000,
+                "transaction_type": "Deposite",
+                "timeStamp": "Sat May 25 2024 09:28:15 GMT-0700 (Pacific Daylight Time)",
+                "__v": 0
+            },
+            {
+                "_id": "66521250f831e26e5ac8173e",
+                "customer_id": "66505514f56cf0e88fd3df8f",
+                "amount": 100000,
+                "balance_before_transaction": 126000,
+                "balance_after_transaction": 226000,
+                "transaction_type": "Deposite",
+                "timeStamp": "Sat May 25 2024 09:28:15 GMT-0700 (Pacific Daylight Time)",
+                "__v": 0
+            },
+            {
+                "_id": "665212a3f831e26e5ac81742",
+                "customer_id": "665066116d6513bc15ea67bb",
+                "amount": 50000,
+                "balance_before_transaction": 200000,
+                "balance_after_transaction": 250000,
+                "transaction_type": "Deposite",
+                "timeStamp": "Sat May 25 2024 09:28:15 GMT-0700 (Pacific Daylight Time)",
+                "__v": 0
+            },
+            {
+                "_id": "665212bcf831e26e5ac81746",
+                "customer_id": "665066116d6513bc15ea67bb",
+                "amount": 50000,
+                "balance_before_transaction": 250000,
+                "balance_after_transaction": 200000,
+                "transaction_type": "Withdraw",
+                "timeStamp": "Sat May 25 2024 09:28:15 GMT-0700 (Pacific Daylight Time)",
+                "__v": 0
+                }
+            ]
+        }
+***********************************************************************************************************
+8.  Get Single Customer Transaction History (Admin) API
+    URL: http://localhost:2002/admin/customerTransactions?id=6650667a2efd003758b3aaa4
+    Request Type: GET
+    Response: {
+        "status": true,
+        "msg": "Customer Transactions",
+        "transactions": [
+            {
+                "_id": "66520f4b01c3b288d707386a",
+                "customer_id": "6650667a2efd003758b3aaa4",
+                "amount": 50000,
+                "balance_before_transaction": 10000000,
+                "balance_after_transaction": 9950000,
+                "transaction_type": "Withdraw",
+                "timeStamp": "Sat May 25 2024 09:16:54 GMT-0700 (Pacific Daylight Time)",
+                "__v": 0
+            },
+            {
+                "_id": "66520fd501c3b288d707386e",
+                "customer_id": "6650667a2efd003758b3aaa4",
+                "amount": 50000,
+                "balance_before_transaction": 9950000,
+                "balance_after_transaction": 9900000,
+                "transaction_type": "Withdraw",
+                "timeStamp": "Sat May 25 2024 09:16:54 GMT-0700 (Pacific Daylight Time)",
+                "__v": 0
+            },
+            {
+                "_id": "665210577031b0ce1a89fdc7",
+                "customer_id": "6650667a2efd003758b3aaa4",
+                "amount": 50000,
+                "balance_before_transaction": 9900000,
+                "balance_after_transaction": 9950000,
+                "transaction_type": "Deposite",
+                "timeStamp": "Sat May 25 2024 09:22:38 GMT-0700 (Pacific Daylight Time)",
+                "__v": 0
+                }
+            ]
+        }
+***********************************************************************************************************
+9.  Get Single Customer Transaction History (Customer) API
+    URL: http://localhost:2002/customer/transactions?id=6650667a2efd003758b3aaa4
+    Request Type: GET
+    Response: {
+        "status": true,
+        "msg": "Transaction History",
+        "transactions": [
+            {
+                "_id": "66520f4b01c3b288d707386a",
+                "customer_id": "6650667a2efd003758b3aaa4",
+                "amount": 50000,
+                "balance_before_transaction": 10000000,
+                "balance_after_transaction": 9950000,
+                "transaction_type": "Withdraw",
+                "timeStamp": "Sat May 25 2024 09:16:54 GMT-0700 (Pacific Daylight Time)",
+                "__v": 0
+            },
+            {
+                "_id": "66520fd501c3b288d707386e",
+                "customer_id": "6650667a2efd003758b3aaa4",
+                "amount": 50000,
+                "balance_before_transaction": 9950000,
+                "balance_after_transaction": 9900000,
+                "transaction_type": "Withdraw",
+                "timeStamp": "Sat May 25 2024 09:16:54 GMT-0700 (Pacific Daylight Time)",
+                "__v": 0
+            },
+            {
+                "_id": "665210577031b0ce1a89fdc7",
+                "customer_id": "6650667a2efd003758b3aaa4",
+                "amount": 50000,
+                "balance_before_transaction": 9900000,
+                "balance_after_transaction": 9950000,
+                "transaction_type": "Deposite",
+                "timeStamp": "Sat May 25 2024 09:22:38 GMT-0700 (Pacific Daylight Time)",
+                "__v": 0
+                }
+            ]
+        }
+***********************************************************************************************************
+10. Upload Single Document API
+    URL: http://localhost:2002/customer/uploadSinDoc?id=6650667a2efd003758b3aaa4
+    Request Type: POST
+    Body (Form-Data): {
+        doc_name: Krishna,
+        select_doc: Krishna1.jpg (Select File)
+    }
+    Response: {
+        "status": true,
+        "msg": "Uploaded document details",
+        "doc_detail": {
+            "customer_id": "6650667a2efd003758b3aaa4",
+            "doc_name": "Krishna",
+            "select_doc": "http://localhost:2002/assets\\singleImage\\1716720471430_krishna1.jpg",
+            "_id": "6653135766ce4f4d042f3aae",
+            "__v": 0
+            }
+        }
+***********************************************************************************************************
+11. Upload Multiple Document API
+    URL: http://localhost:2002/customer/uploadMulDoc?id=6650667a2efd003758b3aaa4
+    Request Type: POST
+    Body (Form-Data): {
+        doc_name: Shri Ram Ji,
+        select_doc: 2 Files (Select Files)
+    }
+    Response: {
+        "status": true,
+        "msg": "Document Details",
+        "details": {
+            "customer_id": "6650667a2efd003758b3aaa4",
+            "doc_name": "Radha Raman Ji",
+            "select_doc": [
+                {
+                    "type": "image/jpeg",
+                    "name": "1716804362080_01.jpg",
+                    "path": "http://localhost:2002/multipleImage\\1716804362080_01.jpg",
+                    "size": 324118
+                },
+                {
+                    "type": "image/jpeg",
+                    "name": "1716804362114_02.jpg",
+                    "path": "http://localhost:2002/multipleImage\\1716804362114_02.jpg",
+                    "size": 227336
+                }
+            ],
+            "_id": "66545b0a61af6f8fb67d7e1f",
+            "__v": 0
+            }
+        }
+***********************************************************************************************************
+12. Get Uploaded Document List API
+    URL: http://localhost:2002/admin/singleDocList
+    Request Type: GET
+    Response: {
+        "status": true,
+        "msg": "Uploaded document List",
+        "DocList": [
+            {
+                "_id": "66545295365596ab40fa8a68",
+                "customer_id": "6650667a2efd003758b3aaa4",
+                "doc_name": "Krishna",
+                "select_doc": "http://localhost:2002/singleImage\\1716802197571_krishna.jpg",
+                "__v": 0
+            },
+            {
+                "_id": "66545b6661af6f8fb67d7e21",
+                "customer_id": "6650667a2efd003758b3aaa4",
+                "doc_name": "Shree Ram Ji",
+                "select_doc": "http://localhost:2002/singleImage\\1716804454187_shree_ram.png",
+                "__v": 0
+            },
+            {
+                "_id": "6654602336925b7421315054",
+                "customer_id": "6650667a2efd003758b3aaa4",
+                "doc_name": "Laddu Gopal",
+                "select_doc": "http://localhost:2002/singleImage\\1716805667568_ilkuj03-CJNYIldAtZU.jpg",
+                "__v": 0
+                }
+            ]
+        }
+***********************************************************************************************************
+13. Get Multiple Uploaded Document List API
+    URL: http://localhost:2002/admin/mulDocList
+    Request Type: GET
+    Response: {
+        "status": true,
+        "msg": "Uploaded Multiple document List",
+        "DocList": [
+            {
+                "_id": "66545b0a61af6f8fb67d7e1f",
+                "customer_id": "6650667a2efd003758b3aaa4",
+                "doc_name": "Radha Raman Ji",
+                "select_doc": [
+                    {
+                        "type": "image/jpeg",
+                        "name": "1716804362080_01.jpg",
+                        "path": "http://localhost:2002/multipleImage\\1716804362080_01.jpg",
+                        "size": 324118
+                    },
+                    {
+                        "type": "image/jpeg",
+                        "name": "1716804362114_02.jpg",
+                        "path": "http://localhost:2002/multipleImage\\1716804362114_02.jpg",
+                        "size": 227336
+                    }
+                ],
+                "__v": 0
+                }
+            ]
+        }
+***********************************************************************************************************
+14. Get List of Single Documents of Customer API
+    URL: http://localhost:2002/customer/getSingleDocumentsList?id=6650667a2efd003758b3aaa4
+    Request Type: GET
+    Response: {
+        "status": true,
+        "msg": "Document List",
+        "documents": [
+            {
+                "_id": "66545295365596ab40fa8a68",
+                "customer_id": "6650667a2efd003758b3aaa4",
+                "doc_name": "Krishna",
+                "select_doc": "http://localhost:2002/singleImage\\1716802197571_krishna.jpg",
+                "__v": 0
+            },
+            {
+                "_id": "66545b6661af6f8fb67d7e21",
+                "customer_id": "6650667a2efd003758b3aaa4",
+                "doc_name": "Shree Ram Ji",
+                "select_doc": "http://localhost:2002/singleImage\\1716804454187_shree_ram.png",
+                "__v": 0
+            },
+            {
+                "_id": "6654602336925b7421315054",
+                "customer_id": "6650667a2efd003758b3aaa4",
+                "doc_name": "Laddu Gopal",
+                "select_doc": "http://localhost:2002/singleImage\\1716805667568_ilkuj03-CJNYIldAtZU.jpg",
+                "__v": 0
+                }
+            ]
+        }
+***********************************************************************************************************
+15. Get List of Multiple Documents of Customer API
+    URL: http://localhost:2002/customer/getMultipleDocumentsList?id=6650667a2efd003758b3aaa4
+    Request Type: GET
+    Response: {
+        "status": true,
+        "msg": "Document List",
+        "documents": [
+            {
+                "_id": "66545b0a61af6f8fb67d7e1f",
+                "customer_id": "6650667a2efd003758b3aaa4",
+                "doc_name": "Radha Raman Ji",
+                "select_doc": [
+                    {
+                        "type": "image/jpeg",
+                        "name": "1716804362080_01.jpg",
+                        "path": "http://localhost:2002/multipleImage\\1716804362080_01.jpg",
+                        "size": 324118
+                    },
+                    {
+                        "type": "image/jpeg",
+                        "name": "1716804362114_02.jpg",
+                        "path": "http://localhost:2002/multipleImage\\1716804362114_02.jpg",
+                        "size": 227336
+                    }
+                ],
+                "__v": 0
+                }
+            ]
+        }
+***********************************************************************************************************
+16. Send Password Reset Email API
+    URL: http://localhost:2002/sendPasswordResetEmail
+    Request Type: POST
+    Body: {
+            "email": "rambadiadev@gmail.com"
+            }
+        Response: {
+        "status": true,
+        "msg": "Reset password link sent successfully. Please check your mail",
+        "info": {
+            "accepted": [
+                "rambadiadev@gmail.com"
+            ],
+            "rejected": [],
+            "ehlo": [
+                "SIZE 35882577",
+                "8BITMIME",
+                "AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH",
+                "ENHANCEDSTATUSCODES",
+                "PIPELINING",
+                "CHUNKING",
+                "SMTPUTF8"
+            ],
+            "envelopeTime": 908,
+            "messageTime": 824,
+            "messageSize": 911,
+            "response": "250 2.0.0 OK  1717005515 d9443c01a7336-1f44c9683e0sm101984205ad.134 - gsmtp",
+            "envelope": {
+                "from": "devrambadia@gmail.com",
+                "to": [
+                    "rambadiadev@gmail.com"
+                ]
+            },
+            "messageId": "<09559a3f-8c13-3725-1fc3-53f56c34f44d@gmail.com>"
+        },
+        "id": "665767f7dbb8e2e5e12ad4cd",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcl9pZCI6IjY2NTc2N2Y3ZGJiOGUyZTVlMTJhZDRjZCIsImlhdCI6MTcxNzAwNjUzMiwiZXhwIjoxNzE3NDM4NTMyfQ.eCun1lD9GJGkJB4_MhzpxBRyBGlViLy6rB4dw2B_ipA"
+        }
+***********************************************************************************************************
+17. Reset Password API
+    URL: http://localhost:2002/resetPassword?id=665767f7dbb8e2e5e12ad4cd&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcl9pZCI6IjY2NTc2N2Y3ZGJiOGUyZTVlMTJhZDRjZCIsImlhdCI6MTcxNzAwNjUzMiwiZXhwIjoxNzE3NDM4NTMyfQ.eCun1lD9GJGkJB4_MhzpxBRyBGlViLy6rB4dw2B_ipA
+    Request Type: POST
+    Body: {
+        "newPass": "12345",
+        "conPass": "12345"
+        }
+    Response: {
+        "status": true,
+        "msg": "Passwrod reset successfully",
+        "record": {
+            "_id": "665767f7dbb8e2e5e12ad4cd",
+            "name": "devu",
+            "accno": "7532",
+            "email": "rambadiadev@gmail.com",
+            "balance": 200000,
+            "password": "$2b$10$yz.rF4wH2vP1dY9vNQ07X.v0Ia.ASMUuWdzPzysEnpLkMFjmPZqnW",
+            "mobile": "9407260026",
+            "address": {
+                "city": "Indore",
+                "state": "M.P",
+                "pincode": 451212
+            },
+            "gender": "Male",
+            "pancard": "EXPLA4566M",
+            "acctype": "Saving",
+            "simpleinterestrate": 3.1,
+            "fdinterestrate": 7.1,
+            "role": "customer",
+            "status": 0,
+            "info": "Wed May 29 2024 23:04:18 GMT+0530 (India Standard Time)",
+            "ifsc_code": "MPB89890",
+            "__v": 0
+            }
+        }
+***********************************************************************************************************
+18. Change Password API
+    URL: http://localhost:2002/customer/changePassword?id=665767f7dbb8e2e5e12ad4cd&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcl9pZCI6IjY2NTc2N2Y3ZGJiOGUyZTVlMTJhZDRjZCIsImlhdCI6MTcxNzAwOTkwOCwiZXhwIjoxNzE3NDQxOTA4fQ.1rZl15U-Xn62WLeNeXejy7YqCeWwW7MpmZkZOFEc3oA
+    Request Type: POST
+    Body: {
+        "oldPass": 85200,
+        "newPass": 74100,
+        "conPass": 74100
+        }
+    Response: {
+        "status": true,
+        "msg": "Password changed successfully",
+        "record": {
+            "_id": "665767f7dbb8e2e5e12ad4cd",
+            "name": "devu",
+            "accno": "7532",
+            "email": "rambadiadev@gmail.com",
+            "balance": 200000,
+            "password": "$2b$10$zp0hpOo9sU99qnjRJ.womuevpI.oT16J2Ndxca.k5GsiSkBvQLLcC",
+            "mobile": "9407260026",
+            "address": {
+                "city": "Indore",
+                "state": "M.P",
+                "pincode": 451212
+            },
+            "gender": "Male",
+            "pancard": "EXPLA4566M",
+            "acctype": "Saving",
+            "simpleinterestrate": 3.1,
+            "fdinterestrate": 7.1,
+            "role": "customer",
+            "status": 0,
+            "info": "Wed May 29 2024 23:04:18 GMT+0530 (India Standard Time)",
+            "ifsc_code": "MPB89890",
+            "__v": 0
+            }
+        }
+***********************************************************************************************************
+19. Manage Customer (verify, block, delete) API
+    *   (verify)
+        URL: http://localhost:2002/admin/manageCustomer?id=665767f7dbb8e2e5e12ad4cd&status=verify
+        Request Type: GET
+        Response: {
+            "status": true,
+            "msg": "Status updated successfully. Customer is verified.",
+            "record": {
+                "_id": "665767f7dbb8e2e5e12ad4cd",
+                "name": "devu",
+                "accno": "7532",
+                "email": "rambadiadev@gmail.com",
+                "balance": 200000,
+                "password": "$2b$10$2t1OId80hIeymaMejgAJwObXHKLIL8IoYAqWdDMy/oLY7QV26fomy",
+                "mobile": "9407260026",
+                "address": {
+                    "city": "Indore",
+                    "state": "M.P",
+                    "pincode": 451212
+                },
+                "gender": "Male",
+                "pancard": "EXPLA4566M",
+                "acctype": "Saving",
+                "simpleinterestrate": 3.1,
+                "fdinterestrate": 7.1,
+                "role": "customer",
+                "status": 1,
+                "info": "Wed May 29 2024 23:04:18 GMT+0530 (India Standard Time)",
+                "ifsc_code": "MPB89890",
+                "__v": 0
+                }
+            }
+    *   (block)
+        URL: http://localhost:2002/admin/manageCustomer?id=665767f7dbb8e2e5e12ad4cd&status=block
+        Request Type: GET
+        Response: {
+            "status": true,
+            "msg": "Status updated successfully. Customer is blocked.",
+            "record": {
+                "_id": "665767f7dbb8e2e5e12ad4cd",
+                "name": "devu",
+                "accno": "7532",
+                "email": "rambadiadev@gmail.com",
+                "balance": 200000,
+                "password": "$2b$10$2t1OId80hIeymaMejgAJwObXHKLIL8IoYAqWdDMy/oLY7QV26fomy",
+                "mobile": "9407260026",
+                "address": {
+                    "city": "Indore",
+                    "state": "M.P",
+                    "pincode": 451212
+                },
+                "gender": "Male",
+                "pancard": "EXPLA4566M",
+                "acctype": "Saving",
+                "simpleinterestrate": 3.1,
+                "fdinterestrate": 7.1,
+                "role": "customer",
+                "status": 0,
+                "info": "Wed May 29 2024 23:04:18 GMT+0530 (India Standard Time)",
+                "ifsc_code": "MPB89890",
+                "__v": 0
+                }
+            }
+    *   (delete)
+        URL: http://localhost:2002/admin/manageCustomer?id=66505514f56cf0e88fd3df8f
+        Request Type: GET
+        Response: {
+            "status": true,
+            "msg": "Customer record is deleted successfully."
+        }
+***********************************************************************************************************
+20. API
+    URL:
+    Request Type:
+    Response:
+***********************************************************************************************************
+21. API
+    URL:
+    Request Type:
+    Response:
+***********************************************************************************************************
+22. API
+    URL:
+    Request Type:
+    Response:
+***********************************************************************************************************
+23. API
+    URL:
+    Request Type:
+    Response:
+***********************************************************************************************************
+24. API
+    URL:
+    Request Type:
+    Response:
+***********************************************************************************************************
+25. API
+    URL:
+    Request Type:
+    Response:
+***********************************************************************************************************

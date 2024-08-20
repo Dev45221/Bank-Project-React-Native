@@ -1,0 +1,59 @@
+C:\Program Files\Java\jdk-20\bin>keytool.exe
+Key and Certificate Management Tool
+
+Commands:
+
+ -certreq            Generates a certificate request
+ -changealias        Changes an entry's alias
+ -delete             Deletes an entry
+ -exportcert         Exports certificate
+ -genkeypair         Generates a key pair
+ -genseckey          Generates a secret key
+ -gencert            Generates certificate from a certificate request
+ -importcert         Imports a certificate or a certificate chain
+ -importpass         Imports a password
+ -importkeystore     Imports one or all entries from another keystore
+ -keypasswd          Changes the key password of an entry
+ -list               Lists entries in a keystore
+ -printcert          Prints the content of a certificate
+ -printcertreq       Prints the content of a certificate request
+ -printcrl           Prints the content of a CRL file
+ -storepasswd        Changes the store password of a keystore
+ -showinfo           Displays security-related information
+ -version            Prints the program version
+
+Use "keytool -?, -h, or --help" for this help message
+Use "keytool -command_name --help" for usage of command_name.
+Use the -conf <url> option to specify a pre-configured options file.
+
+C:\Program Files\Java\jdk-20\bin>keytool -list -v -keystore "F:\BankDemo\android\app\debug.keystore" -alias androiddebugkey -storepass android -keypass android
+Alias name: androiddebugkey
+Creation date: Jan 1, 2014
+Entry type: PrivateKeyEntry
+Certificate chain length: 1
+Certificate[1]:
+Owner: CN=Android Debug, OU=Android, O=Unknown, L=Unknown, ST=Unknown, C=US
+Issuer: CN=Android Debug, OU=Android, O=Unknown, L=Unknown, ST=Unknown, C=US
+Serial number: 232eae62
+Valid from: Wed Jan 01 04:05:04 IST 2014 until: Wed May 01 04:05:04 IST 2052
+Certificate fingerprints:
+         SHA1: 5E:8F:16:06:2E:A3:CD:2C:4A:0D:54:78:76:BA:A6:F3:8C:AB:F6:25
+         SHA256: FA:C6:17:45:DC:09:03:78:6F:B9:ED:E6:2A:96:2B:39:9F:73:48:F0:BB:6F:89:9B:83:32:66:75:91:03:3B:9C
+Signature algorithm name: SHA1withRSA (weak)
+Subject Public Key Algorithm: 2048-bit RSA key
+Version: 3
+
+Extensions:
+
+#1: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 0B F9 FE 38 89 D2 8A 9C   58 F0 C1 0A B7 0E 43 28  ...8....X.....C(
+0010: D8 23 F3 20                                        .#.
+]
+]
+
+
+Warning:
+The certificate uses the SHA1withRSA signature algorithm which is considered a security risk.
+The JKS keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore F:\BankDemo\android\app\debug.keystore -destkeystore F:\BankDemo\android\app\debug.keystore -deststoretype pkcs12".
